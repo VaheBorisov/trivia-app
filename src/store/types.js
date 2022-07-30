@@ -1,0 +1,4 @@
+export const TriviaActionTypes = {
+  CATEGORIES_LOADING: 'CATEGORIES_LOADING',
+  SET_CATEGORIES: 'SET_CATEGORIES',
+};
