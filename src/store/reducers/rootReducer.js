@@ -7,4 +7,11 @@ const appReducers = combineReducers({
   trivia: triviaReducer
 });
 
-export default appReducers;
+const rootReducer = (state, action) => {
+  if (action.type === 'RESET_STORE') {
+    state = undefined;
+  }
+  return appReducers(state, action);
+};
+
+export default rootReducer;
