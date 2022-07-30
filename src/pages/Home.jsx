@@ -78,7 +78,9 @@ const Home = () => {
     dispatch(TriviaAction.onSelectCategory(value));
   };
 
-  const onStart = () => navigate('/questions');
+  const onStart = () => {
+    navigate('/questions');
+  };
 
   return (
     <Box sx={{ width: '320px' }}>
