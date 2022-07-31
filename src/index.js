@@ -7,7 +7,7 @@ import App from './App';
 
 import store from './store';
 
-import './index.css';
+import './index.scss';
 
 import { FONT_THEME } from './utils/constants';
 

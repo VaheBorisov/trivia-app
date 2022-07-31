@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: -apple-system, 'Barlow', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 134px;
+  background: #E5E5E5;
+}
+
+.container-title.MuiTypography-root {
+  color: #3A7859;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.difficulty.MuiBox-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 37px;
+  border-radius: 12px 0 12px 12px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 170%;
+  color: #FFFFFF;
+}
+
+.difficulty.MuiBox-root.easy {
+  background: #42A976;
+}
+
+.difficulty.MuiBox-root.medium {
+  background: #EAC505;
+}
+
+.difficulty.MuiBox-root.hard {
+  background: #EF7D54;
+}

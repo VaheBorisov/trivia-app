@@ -38,7 +38,7 @@ const getQuestions = () => async (dispatch, getState) => {
     dispatch(setAnswers(answers));
 
   } catch (e) {
-    // console.warn(e);
+    console.warn(e);
   } finally {
     dispatch(questionsLoading(false));
   }
@@ -108,7 +108,7 @@ const setQuestions = (questions) => {
 
 const questionsLoading = (loading) => {
   return {
-    type: TriviaActionTypes.CATEGORIES_LOADING,
+    type: TriviaActionTypes.QUESTIONS_LOADING,
     payload: loading
   };
 };

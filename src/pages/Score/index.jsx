@@ -3,17 +3,9 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import {Box, Button, Typography} from '@mui/material';
 
-import {TriviaAction} from '../store/actions';
+import {TriviaAction} from '../../store/actions';
 
-const triviaAppTitle = {
-  color: '#3A7859',
-  fontWeight: 700,
-  fontSize: '50px',
-  lineHeight: 1.5,
-  textAlign: 'center',
-  marginBottom: '146px'
-};
-
+import './score.scss';
 
 const Score = () => {
   const navigate = useNavigate();
@@ -26,10 +18,10 @@ const Score = () => {
   };
 
   return (
-    <Box>
-      <Typography variant="h3" sx={triviaAppTitle}>Thank You</Typography>
-      <Box mt={5}>Your Score: {score} / {list.length}</Box>
-      <Button onClick={onBackHome}>Back to home</Button>
+    <Box className="score-container">
+      <Typography variant="h3" className="container-title score-title">Thank You</Typography>
+      <Box className="score">Your Score: {score} / {list.length}</Box>
+      <Button className="back-to-home" onClick={onBackHome}>Back to home</Button>
     </Box>
   );
 };

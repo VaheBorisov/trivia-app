@@ -1,0 +1,138 @@
+.home-container.MuiBox-root {
+  width: 320px;
+
+  .home-title {
+    margin-bottom: 146px;
+  }
+
+  .category-label.MuiFormLabel-root {
+    &.MuiFormLabel-root {
+      margin-bottom: 36px;
+      color: #354153;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1.5;
+      text-align: center;
+
+      &.Mui-focused {
+        color: #354153;
+      }
+    }
+  }
+
+  .select-category.MuiOutlinedInput-root {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    background: #F6F7F8;
+
+    & > .MuiSelect-select {
+      padding: 12.5px 46px 12.5px 16px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 170%;
+      color: #354153;
+
+      span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 170%;
+        color: #9EA0A4;
+      }
+    }
+
+    & > .MuiOutlinedInput-notchedOutline {
+      border: 2px solid #E7EBF1;
+    }
+
+    &:hover {
+      & > .MuiOutlinedInput-notchedOutline {
+        border-color: #95B6A9;
+      }
+    }
+
+    &.Mui-focused {
+      & > .MuiOutlinedInput-notchedOutline {
+        border-color: #95B6A9;
+        border-width: 2px;
+      }
+    }
+  }
+
+  .start-btn.MuiButton-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 56px;
+
+    background: #3A7859;
+    border-radius: 18px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 99px;
+
+    color: #FFFFFF;
+
+    &:hover {
+      background: #2D6A4C;
+    }
+
+    &.Mui-disabled {
+      background: #F6F7F8;
+      color: #C4C4C4;
+    }
+  }
+}
+
+.select-category-dropdown.MuiMenu-paper.MuiPaper-root {
+  max-height: 222px;
+  margin-top: 6px;
+  width: 320px;
+  background: #F6F7F8;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+
+  @media screen and (max-width: 350px) {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .MuiMenu-list {
+    padding: 10px !important;
+    width: auto !important;
+
+    .MuiMenuItem-root {
+      background: #F6F7F8;
+      margin: 4px 0 0;
+      border-radius: 16px;
+      padding: 6px 18px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 170%;
+      color: #354153;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:hover, &.Mui-selected {
+        background: #E7EBF1;
+        color: #3A7859;
+      }
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+}

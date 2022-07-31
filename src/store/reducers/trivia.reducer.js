@@ -3,7 +3,7 @@ import { TriviaActionTypes } from '../types';
 const initialState = {
   categories: {
     list: [],
-    entryCategory: null,
+    entryCategory: '',
     isLoading: false
   },
   questions: {
