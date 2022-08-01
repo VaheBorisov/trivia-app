@@ -2,12 +2,12 @@ import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 
-import {Box, Typography, FormControl, Select, MenuItem, FormLabel, Button} from '@mui/material';
+import {Box, Typography, FormControl, FormLabel, Button, MenuItem, Select, OutlinedInput} from '@mui/material';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import {TriviaAction} from '../../store/actions';
 
 import './home.scss';
-
 
 const Home = () => {
   const navigate = useNavigate();
@@ -18,10 +18,6 @@ const Home = () => {
   useEffect(() => {
     dispatch(TriviaAction.getCategories());
   }, [dispatch]);
-
-  const renderValue = (selected) => {
-    return selected || <span className="placeholder">Category</span>;
-  }
 
   const onSelectCategory = ({ target: { value } }) => {
     dispatch(TriviaAction.onSelectCategory(value));
@@ -40,8 +36,9 @@ const Home = () => {
           className="select-category"
           displayEmpty
           value={entryCategory}
+          IconComponent={KeyboardArrowDownIcon}
           onChange={onSelectCategory}
-          renderValue={renderValue}
+          renderValue={entryCategory !== "" ? undefined : () => <span className="placeholder">Category</span>}
           MenuProps={{ PaperProps: { className: 'select-category-dropdown' } }}
         >
           {list.map(category => <MenuItem key={category.id} value={category.id}>{category.name}</MenuItem>)}
